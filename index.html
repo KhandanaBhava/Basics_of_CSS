@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <h1>My Website</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tempore
+      odio quidem perspiciatis amet, laudantium itaque eligendi, officiis
+      architecto, enim perferendis alias saepe repellat nesciunt aspernatur!
+      Veritatis nam minus beatae.
+    </p>
+    <button>Get Started</button>
+
+    <!-- Internal css(not recommened except for testing).Has highest priority -->
+    <p style="background-color: bisque">
+      ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, commodi!
+      Magnam soluta ea itaque laudantium beatae praesentium, rem provident eum
+      non tenetur accusantium ipsa! Debitis at inventore rem ducimus deserunt.
+    </p>
+
+    <!-- Internal css(not recommended) -->
+    <style>
+      p {
+        background-color: aqua;
+      }
+    </style>
+
+    <!-- External css(recommended) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+
+    <!-- Note-Both internal and external css have same priority.CSS has cascading nature which means execution happens from top to
+    bottom and whatever is written down takes higher priority except incase of inline css.
+    So in this case colour will be brown as external css is below internla css -->
+  </head>
+  <body></body>
+</html>
