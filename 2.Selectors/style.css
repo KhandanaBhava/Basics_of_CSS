@@ -1,0 +1,66 @@
+/* Types of Selectors in css
+1)ID selector[ID of an element is unique within a page] 
+
+2)Class Selector(Dont repeat yourself)[One element can have multiple classes] 
+
+3)Element Selector ......Classes are given within tags.Example with span and header tag
+
+4)Universal Selector[Style applied to all elements.Highest priority i.e cascading effect not applicable]
+
+5)Grouping Selector[for grouping to ensure DRY is maintained]
+
+6)Nested Selector[For changing font of particular paragraph inside a particular article]
+7)Pseudo selector[For example hover]*/
+
+/* Examples */
+
+/* Universal selector-Applied to all elements of page */
+* {
+  font-family: fantasy;
+}
+
+/* Element selector */
+body {
+  font-size: 24px;
+}
+
+/* Pseudo Selector(Hover) */
+p:hover {
+  font-family: monospace;
+}
+
+/* Nesting Selector(Paragraph isndie Article with id first has been changed to green colour) */
+#first > p {
+  color: green;
+}
+
+/* ID selector(access with #).The code snippet below is example of grouping selector also
+First,second and third have been grouoed together*/
+
+#first,
+#second,
+#third {
+  color: red;
+}
+
+#second {
+  color: blue;
+}
+
+.purple {
+  color: purple;
+  /* font-family: monospace; */
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* Note-This specificity order is followed incase of selectors(ICE RULE)
+Id(#) > Class(.) > Element */
+
+/* Some Points
+1)Use class selectors instead of id selectors in CSS
+2)!important rule(!important is used to give highest priority ireespective of any priority assigned).It should almost never be used */
