@@ -1,0 +1,55 @@
+main {
+  border: 5px dashed red;
+  width: 50%;
+}
+/* width:50% means 50% width of the parent of main i.e body
+px is absolute
+percentage,em,rem,vw and vh are relative */
+
+body {
+  font-size: 2em;
+}
+header {
+  font-size: 2em;
+}
+
+section {
+  border: 5px solid yellow;
+  width: 50%;
+}
+
+h1 {
+  font-size: 40px; /*By default font size is in em and different for different tags 
+     px shows same size irrespective of font size set by user(absolute).
+     Visually impaired people change browser settings to make websites visible.But if font size is in px it will show same size
+     in any browser(whether settings changed or not)*/
+  border: 5px dashed burlywood;
+  width: 75vw; /*view width(wrt device width)*/
+  height: 20vh; /*view height(device height)*/
+}
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+/* em works with respect to parent. h2 2 em means 8 em in this case. 2em(for h2)*2em(for header)*2em
+(for body)*1em(for html by default as not mentioned) */
+
+/* as em is wrt to parent, rem should bes used.rem is wrt root(i.e html tag) and we never chnage font size of html tag(root)
+although we can.If we do, in that case rem will also act like em */
+
+/*both em and rem are relative(changes size according to user's browser settings) */
+
+/* BEST PRACTICES */
+
+/* 1) Always use rem as it is relative and does not depend on parent size */
+
+/* 2)Always define the font sizes at the beginning and do not change them throughout the code unless absolutely necessary. */
+
+/* 3)It makes sense to use px for borders as we want it to look the same irrespective of user's settings */
+
+/* 4)vw and vh are also not used although they adjust font sizes with respect to screen dimensions of the device.
+Insted we use media queries */
