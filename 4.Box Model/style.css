@@ -1,0 +1,28 @@
+/* All elements in html are in the form of a box. Content,padding,border,margin from inside to outside */
+
+.box {
+  border: 20px solid green;
+  width: 200px;
+  height: 200px;
+  padding: 30px; /*padding to separate content from border.All 4 sides 40 px*/
+  /* if padding:40px 30 px 20px 10 px- then in clockwise manner( top reight bottom left)*/
+  /*if padding:40px 30px- then top and bottom 40px , left right 30px*/
+  /*if padding:40px 30px 10px- then top 40px , left and right 30px , bottom 10px*/
+
+  margin: 40px; /*used to separate elements.In this case border div will be separated from its parent(i.e body)*/
+  /*by default body has some margin.We prefer to set margin and padding of every element as zero by using universal
+    seclector.This is done to ensure we have more control over styling*/
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* When we mention width:200 px, box width is not 200px.Content width is 200px.The box width is 20(border width)+
+30(padding)+200(content)+30(padding)+20(border width). Margin is not included in box width. This means that the box has
+dimensions of 300*300. If we want the box to be of 200*200, we use box sizing.
+
+Box sizing: border box means that our box will have a total width of 200(ie. 200*200).This is done to ensure more control
+and to maintain uniformity.In this case padding and border width remain same but the content shrinks.The new box dimesnions are
+20(border width)+30(padding)+100(content)+30(padding)+20(border width).Thus box dimensions are 200*200. */
