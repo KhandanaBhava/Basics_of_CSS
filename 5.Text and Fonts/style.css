@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  text-transform: capitalize; /* for capitalizing first letter of each word*/
+  color:transparent; /*this removes the original black color of the font, so now shadow will have only red color*/
+  text-shadow: 4px 4px 5px black;/*4px horizontal , 4px vertical , 5px blur radius.Normally shadow is applied to black
+  (i.e default) color.But we can remove it using transparent.In order to make something blur, we make colour transparent
+  and apply shadow*/
+}
+
+h2 {
+  font-size: 3rem;
+  color: darkorchid;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: aqua;
+}
+h3{
+  color: transparent;
+  text-shadow: 4px 4px 1px red,8px 8px 1px blue; /*double shadow,very stylish effect*/
+  font-size: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+a {
+  /* anchor tag has text-decoration line: underline by default; */
+  font-size: 2rem;
+  text-decoration-line: line-through;
+  text-decoration-style: dotted;
+}
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Fonts are separated by commas as fallback options.
+  For example if verdana is not available in browser then geneva, then tahoma and so on.
+  Verdana is my favourite font */
+  text-align: justify;
+  text-indent: 40px; /*indenting first letter of first line only*/
+  line-height: 1.2rem; /*improves readability*/
+  word-spacing: 0.8rem; /*negative word spacing means words will coincide*/
+  font-weight: 500; /*for boldness of font*/
+  font-style: italic;
+}
