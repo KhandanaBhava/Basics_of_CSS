@@ -2,7 +2,7 @@ h1 {
   text-align: center;
   font-size: 4rem;
   text-transform: capitalize; /* for capitalizing first letter of each word*/
-  color:transparent; /*this removes the original black color of the font, so now shadow will have only red color*/
+  color:transparent; /*this removes the original black color of the font, so now we will have only black shadow(and no colour)*/
   text-shadow: 4px 4px 5px black;/*4px horizontal , 4px vertical , 5px blur radius.Normally shadow is applied to black
   (i.e default) color.But we can remove it using transparent.In order to make something blur, we make colour transparent
   and apply shadow*/
