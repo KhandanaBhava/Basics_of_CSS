@@ -1,0 +1,67 @@
+/* By default all the positions are static */
+
+/*CSS Positions-1)Static 2)Absolute 3)Relative 4)Sticky 5)Fixed*/
+
+body {
+  color: white;
+}
+
+.container {
+  width: 300px;
+  height: 600px;
+  margin: 100px;
+  background-color: aquamarine;
+  position: relative;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  position: relative; /*Relative to parent(i.e container) */
+  background-color: red;
+  top: 100px; /*100 px down from top of box , not of page */
+  left: 100px; /*100 px right from left of box , not of page */
+  /*negative values can also be defined.For example bottom -50px is same as top 50px*/
+}
+
+.green {
+  background-color: green;
+  position: absolute; /*absolute is relative to the parent who has relative property.If no such parent,then absolute 
+  is relative to the root(html page).Here we have conatiner position relative.So it is relative to conatiner.*/
+  bottom: 0;
+  right: 0;
+}
+
+.blue {
+  background-color: blue;
+  position: fixed; /*Always fixed wrt conatiner(it still has container's margin).
+  Does not move.Can be used to make navbars which do not move.
+  To make navbars, give top:0,left:0 and width 100% and a background colour*/
+  bottom: 50px;
+  right: 50px;
+  z-index: 2; /*z-index shows which will be visible to the user(i.e which will be towards the user).
+  Higher z-index means towards the user*/
+}
+
+.purple {
+  background-color: purple;
+  position: sticky; /*sticky wrt parent(container).Keeps going down till parent is reached, then goes up*/
+  top: 50px;
+}
+
+.dummy {
+  background-color: black;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 1;
+}
+
+/*Spacer is used for creating some white space*/
+
+.spacer {
+  height: 300vh;
+}
