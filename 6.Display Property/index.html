@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- If padding is zero then bullet points dissappear for list items.We have to add padding to ensure bullet points -->
+
+    <nav>
+      <ul>
+        <li>Block</li>
+        <li>Inline</li>
+        <li>Inline-Block</li>
+        <li>None</li>
+      </ul>
+    </nav>
+
+    <!-- Use of span.Different colours of different words of heading -->
+    <h1>
+      <span style="color: blue">Display</span
+      ><span style="color: black">Property</span>
+    </h1>
+
+    <!-- Pragraph,heading,div,forms,ol,ul,li(list) elements are block elements. They block content and go to next line -->
+    <!-- Border takes entire line(by default as in case of heading , if width not mentioned)and not only the content -->
+    <p>Lorem ipsum dolor sit.</p>
+
+    <p>Lorem ipsum dolor sit.</p>
+
+    <!-- Span is inline element.Does not block line. Same line -->
+
+    <!-- Inline elements are span,anchor tag -->
+    <!-- Border takes space of only the content -->
+    <!-- Height and width of inline elements can't be defined(Drawback) -->
+    <!-- Margin of inline element can be defined but only right and left margin.Top and bottom margin can't be defined.
+    To give top and bottom margin to inline elements, they have to converted to block or inline-block -->
+
+    <!-- Images are inline-block elements.They can be used as inline as well as their height and width can be defined -->
+
+    <span>Lorem ipsum dolor sit amet.</span>
+
+    <span>Lorem, ipsum dolor.</span>
+
+    <img
+      src="https://www.animationxpress.com/wp-content/uploads/2019/09/blockchain-400X400.jpg"
+      alt=""
+      srcset=""
+    />
+    <a href="#">Click Me</a>
+    <a href="#">Click Me</a>
+  </body>
+</html>

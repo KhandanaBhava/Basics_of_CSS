@@ -1,0 +1,38 @@
+/* Display Properties in CSS
+1)Block 2)Inline 3)Inline-Block 4)none(makes item dissappear from html itself) */
+
+* {
+  border: 2px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 1rem; /*padding has to be added to add bullets to li elements*/
+  list-style: square; /*by default circular bullet point.We have changed it to square*/
+  }
+
+li{
+    border: none;
+}
+
+p {
+  display: inline-block; /*Changing display of paragraph from block to inline-block.So width can be defined */
+  width: 100px; /*Width changed.Content inside 100px will be in one line and remaining in next line*/
+}
+
+span {
+  width: 900px; /*No change as span is inline by default*/
+}
+
+img {
+  width: 200px; /*Inline-block element so width can be changed*/
+}
+
+a {
+  display: block; /*inline changed to block.So now anchor tag will be in 2 different lines.
+    Their border will take 200px each and not entire width as width has been specified.
+    If we want the anchor tag to be side by side we should make them inline-block*/
+  width: 200px;
+}
