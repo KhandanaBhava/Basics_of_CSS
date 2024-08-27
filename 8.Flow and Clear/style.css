@@ -1,0 +1,42 @@
+/*CSS Float - 1)Left 2)Right 3)None(doensn't float) 4)Inherit(inherits floating property of the parent)*/
+
+/*VVVI----Float and clear should only be used with text and image alignment and styling.
+          For layouts FLEXBOX should be used.*/
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  /* height: 400px; */
+  border: 2px solid red;
+  /*overflow:visible;by default overflow is visible;
+    /* overflow: hidden;overflow is hidden and text won't be seen outside the box */
+  /* overflow: scroll;horizontal and vertical scrollbar appears irrespective of text whether is large enough to overflow or not */
+  /* overflow: auto;scrollbar only appears if needed */
+}
+.p1 {
+  border: 2px solid green;
+  margin-right: 100px; /*margin cannot be given to the paragraph.It won't work*/
+}
+.img1 {
+  float: right; /*image floats right.content on left*/
+  margin-left: 50px; /*margin is always given to the image.Inspect to see the gap in the left side between the image
+    and the paragraph*/
+}
+.img2 {
+  float: left;
+}
+
+/*We want the second paragrpah and second image to start below the first image.To ensure this we have to prevent the 
+overflow of the image 1 from the block*/
+
+.block1 {
+  overflow: auto;/*ALways use overflow auto incase of any problems with float*/
+}
+
+/*We do not want p3 to float.For that we will use clear*/
+
+.p3 {
+  clear: left;
+}
