@@ -1,0 +1,36 @@
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: steelblue;
+    margin: 80px auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5,2); /*0.5 wrt 200px in x axis and 2 wrt height in y axis*/
+
+    /*Can also be written separately like this.
+        transform: scaleX(value);
+        transfrom: scaleY(value) */
+
+    transform: skew(20deg,40deg); /*Makes 20deg with x and 40deg with y axis*/
+    transform: rotateZ(45deg); /*Rotates 45deg wrt to mentioned axis.Z axis is by default*/
+    transform: translate(20px,40px); /*Moves away from initial position.It nullifies skew,rotate and scale if not written together*/
+
+    /* To use all of them at a time write them together*/
+
+    /* transform:rotate(45deg) scale(1.2) skew(30deg)  translate(45px); */
+
+    transition: 0.5s ease;
+    transform-origin: 100px 200px;/*It allows us to change the origin*/
+}
+
+.box:hover {
+    transform: rotate(45deg); /*Rotates from 100 px in x and from 200px in y axis*/
+}
