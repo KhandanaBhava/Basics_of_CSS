@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 40px;
+}
+
+/*Link,visited,hover,active etc all are pseudo classes which show different states.Represented by :*/
+
+.primary-btn:link {
+    color: green;
+    padding: 10px;
+}
+
+.primary-btn:visited { /*After clicking (ie state changes to visited) button changes to orange colour*/
+    color: orange; 
+}
+
+.primary-btn:hover {
+    color: red;
+    background-color: black;
+}
+
+.primary-btn:active { /*active is a state when we click */
+    color: black;
+    background-color: white;
+    border: 4px solid green;
+}
+
+ ul li:first-child { /*first child of the list item(ie. item-1) and item type 2(item type 2 - 1)*/
+    background-color: violet;
+}
+
+ul li:last-child {  /*last child of the list item(ie. item-1) and item type 2(item type 2 - 1)*/
+    background-color: red;
+} 
+
+/* nth child */
+/* an+b where n starts from zero */
+
+/* ul li:nth-child(4) { Here the value of b is 4 and an is 0. so only 4th item gets changed
+    background-color: gray
+} */
+ul li:nth-child(2n + 1) {
+    background-color: gray
+}
+
+/*Pseudo element select specified part of an element whereas pesudo class select the entire state of an element. Represented by ::*/
+
+h2::first-letter { 
+    font-size: 3rem; /*First letter changed*/
+}
+
+p::first-line {
+    background-color: burlywood;
+}
+
+::selection { /*By default when we select something in a website it is of blue colour.Here we have changed selection colour to green*/
+    color: green;
+    background-color: black;
+} 
+
+/* before and after */
+
+h3::before {
+    content: 'any this is begining'; /*Not a part of the DOM(html). Not visible when we inspect*/
+}
+
+h3::after {
+    content: '*'; /*Not a part of the DOM(html). Not visible when we inspect*/
+}
+
+.required::after { /*Applied to all parts of element having class required*/
+    content: '*';
+    color: red; 
+}
+
+.important::after { /*Applied to all parts of element having class important*/
+    content: 'important';
+    background-color: red;
+    color: white;
+    padding: 0.2rem;
+    font-size: 0.5rem;
+    margin-left: 10px;
+    vertical-align: middle;
+} 
